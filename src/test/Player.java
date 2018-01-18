@@ -1,5 +1,5 @@
 package test;
 
-public class Player {
+public class Player extends Character {
 
 }
