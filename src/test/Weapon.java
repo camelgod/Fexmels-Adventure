@@ -2,8 +2,6 @@ package test;
 
 import java.util.Random;
 
-import mainGame.Weapon;
-
 public enum Weapon {
 	dagger,
 	sword,
