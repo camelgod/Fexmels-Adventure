@@ -9,6 +9,7 @@ public class Character implements CharacterBehavior {
 
 	int hp;
 	int level;
+	int experience;
 	String name;
 	Weapon weapon;
 	
@@ -34,6 +35,12 @@ public class Character implements CharacterBehavior {
 	@Override
 	public void Talk() {
 
+	}
+
+	@Override
+	public void Die() {
+		// give experience to player and kill enemy
+		
 	}
 
 }

@@ -10,5 +10,6 @@ public interface CharacterBehavior {
 	void Sleep();
 	void Heal();
 	void Talk();
+	void Die();
 
 }
