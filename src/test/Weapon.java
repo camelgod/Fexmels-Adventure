@@ -1,5 +1,8 @@
 package test;
 
+import java.util.Random;
+
+import mainGame.Weapon;
 
 public enum Weapon {
 	dagger,
@@ -18,5 +21,13 @@ public enum Weapon {
 				return 0;
 		}
 	}
+
+	public static Weapon makeRandomWeapon() {
+
+		Weapon weapon = Weapon.values()[new Random().nextInt(Weapon.values().length)];
+		
+		return weapon;
+	}
+
 
 }
