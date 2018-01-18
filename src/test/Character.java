@@ -7,28 +7,33 @@ package test;
  */
 public class Character implements CharacterBehavior {
 
+	int hp;
+	int level;
+	String name;
+	Weapon weapon;
+	
+	public Character() {
+		
+	}
+	
 	@Override
-	public int Attack() {
-		// TODO Auto-generated method stub
-		return 0;
+	public void Attack() {
+
 	}
 
 	@Override
-	public int Sleep() {
-		// TODO Auto-generated method stub
-		return 0;
+	public void Sleep() {
+	}
+
+
+	@Override
+	public void Heal() {
+
 	}
 
 	@Override
-	public int Heal() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+	public void Talk() {
 
-	@Override
-	public int Talk() {
-		// TODO Auto-generated method stub
-		return 0;
 	}
 
 }

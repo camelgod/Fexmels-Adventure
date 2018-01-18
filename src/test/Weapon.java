@@ -1,5 +1,6 @@
 package test;
 
+
 public enum Weapon {
 	dagger,
 	sword,

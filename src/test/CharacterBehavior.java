@@ -6,9 +6,9 @@ package test;
 
 public interface CharacterBehavior {
 	
-	int Attack();
-	int Sleep();
-	int Heal();
-	int Talk();
+	void Attack();
+	void Sleep();
+	void Heal();
+	void Talk();
 
 }
