@@ -16,12 +16,12 @@ public class Character implements CharacterBehavior {
 	}
 	
 	@Override
-	public void Attack() {
+	public void Attack(Character target) {
 
 	}
 
 	@Override
-	public void Sleep() {
+	public void Sleep(int duration) {
 	}
 
 
@@ -31,14 +31,13 @@ public class Character implements CharacterBehavior {
 	}
 
 	@Override
-	public void Talk() {
-
+	public void Talk(String phrase) {
+		System.out.println(this.name + " says: " + phrase);
 	}
 
 	@Override
 	public void Die() {
 		// give experience to player and kill enemy
-		
 	}
 
 }

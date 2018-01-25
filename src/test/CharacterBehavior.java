@@ -6,10 +6,10 @@ package test;
 
 public interface CharacterBehavior {
 	
-	void Attack();
-	void Sleep();
+	void Attack(Character target);
+	void Sleep(int duration);
 	void Heal();
-	void Talk();
+	void Talk(String phrase);
 	void Die();
 
 }
