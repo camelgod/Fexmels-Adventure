@@ -9,6 +9,12 @@ import characters.Player;
  */
 
 public class Game {
+	
+	public Game() {
+
+
+	}
+	
 
 	public static void Initialize() {
 			Player p1 = new Player(Menu.CreateStringMenu("Please enter your name: "));
@@ -16,6 +22,7 @@ public class Game {
 			p1.setGender(Menu.CreateCharMenu("What is your gender?: "));
 			
 			Menu.CreateMultiMenu("Welcome to the tavern!\nWhat would you like to do?: ", new String[]{"Sleep", "Eat"});
+			
 	}
 
 

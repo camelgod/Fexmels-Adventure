@@ -5,9 +5,6 @@ import java.util.Scanner;
 
 public class Menu {
 
-	private String text;
-	private int options;
-	
 	static Scanner sc = new Scanner(System.in);
 	
 	public Menu(String text, String args[])  {
@@ -43,6 +40,23 @@ public class Menu {
 
 		System.out.println(Integer.toString(reply) + " (" + options[reply] + ") was selected.");
 		return optionArray.get(reply);
+	}
+	
+	public static void HelpMenu(String argument) {
+		argument = argument.toLowerCase();
+		switch(argument) {
+		case "weapon":
+			System.out.println("You are wielding");
+
+
+			
+		
+		}
+		
+	}
+	public static void HelpMenu() {
+			System.out.println("Invalid input!");
+		
 	}
 
 }
