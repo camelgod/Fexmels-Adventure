@@ -1,4 +1,7 @@
-package test;
+package characters;
+
+import game.Weapon;
+import world.Location;
 
 /*
  * 
@@ -10,6 +13,7 @@ public class Character implements CharacterBehavior {
 	int experience;
 	String name;
 	Weapon weapon;
+	Location location;
 	
 	public Character() {
 		
@@ -38,6 +42,10 @@ public class Character implements CharacterBehavior {
 	@Override
 	public void Die() {
 		// give experience to player and kill enemy
+	}
+	
+	public Weapon getWeapon() {
+		return this.weapon;
 	}
 
 }

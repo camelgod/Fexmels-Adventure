@@ -1,4 +1,4 @@
-package test;
+package game;
 
 import java.util.Random;
 
@@ -9,7 +9,7 @@ public enum Weapon {
 	spear,
 	chickenbone;
 	
-	int GetDamage() {
+	public int GetDamage() {
 		switch(this) {
 			case dagger:
 				return 20;

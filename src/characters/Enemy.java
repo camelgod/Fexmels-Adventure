@@ -1,4 +1,6 @@
-package test;
+package characters;
+
+import game.Weapon;
 
 public class Enemy extends Character {
 	

@@ -1,4 +1,6 @@
-package test;
+package characters;
+
+import game.Weapon;
 
 public class Player extends Character {
 
@@ -18,7 +20,6 @@ public class Player extends Character {
 			this.gender = characterGender;
 		} else {
 		}
-		
 	}
 
 }

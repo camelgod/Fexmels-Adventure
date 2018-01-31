@@ -1,4 +1,4 @@
-package test;
+package characters;
 
 /*
  * Formålet med denne interface er å definere oppførsel som enhver Character må ha.
