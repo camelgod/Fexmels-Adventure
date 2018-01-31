@@ -10,25 +10,22 @@ import characters.Player;
 
 public class Game {
 	
-	public Game() {
-
+	public static Player player;
+	public static boolean debug = true;
+	
+	public static void Initialize() {
+			player = new Player(Menu.CreateStringMenu("Please enter your name: "));
+			// player.setGender(Menu.CreateCharMenu("What is your gender?: "));
+			// Menu.CreateMultiMenu("Welcome to the tavern!\nWhat would you like to do?: ", new String[]{"Sleep", "Eat"});
 
 	}
 	
 
-	public static void Initialize() {
-			Player p1 = new Player(Menu.CreateStringMenu("Please enter your name: "));
-
-			p1.setGender(Menu.CreateCharMenu("What is your gender?: "));
-			
-			Menu.CreateMultiMenu("Welcome to the tavern!\nWhat would you like to do?: ", new String[]{"Sleep", "Eat"});
-			
-	}
-
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Initialize();
+		Menu.GetCommand();
+		
 	}
 
 }

@@ -1,7 +1,9 @@
 package game;
 
 import java.util.ArrayList;
+
 import java.util.Scanner;
+import game.Command;
 
 public class Menu {
 
@@ -13,12 +15,27 @@ public class Menu {
 	public static String CreateStringMenu(String text) {
 		System.out.print(text + " ");
 		String reply = sc.next();
+		sc.nextLine();
 		return reply;
+	}
+
+	public static void GetCommand() {
+		System.out.print("Enter command: ");
+		String reply = sc.nextLine();
+
+		if(reply.contains(" ")) {
+			Command command = Command.valueOf(reply.substring(0, reply.indexOf(" ")));
+			String argument = reply.substring(reply.indexOf(" ") + 1);
+			Command.ExecuteCommand(command, argument);
+		} else {
+			Command.ExecuteCommand(Command.valueOf(reply));
+		}
 	}
 
 	public static char CreateCharMenu(String text) {
 		System.out.print(text + " ");
 		char reply = sc.next().charAt(0);
+		sc.nextLine();
 		return reply;
 	}
 	
@@ -33,6 +50,7 @@ public class Menu {
 		}
 
 		int reply = sc.nextInt();
+		sc.nextLine();
 		if(reply > options.length || reply > 0) {
 			System.out.println("Invalid input!");
 			Menu.CreateMultiMenu(text, options);
@@ -46,16 +64,19 @@ public class Menu {
 		argument = argument.toLowerCase();
 		switch(argument) {
 		case "weapon":
-			System.out.println("You are wielding");
-
-
-			
-		
+		case "weapons":
+			System.out.println("You are currently wielding " + Game.player.getWeapon() + " which has damage of " + Game.player.getWeapon().GetDamage());
 		}
+		
+		GetCommand();
+		
 		
 	}
 	public static void HelpMenu() {
-			System.out.println("Invalid input!");
+		System.out.println("## General Help Menu ##");
+		Command.GetAvailableCommands();
+		System.out.println("To get specific help, use command \"HELP [word]\".\nFor example \"HELP weapons\"");
+		GetCommand();
 		
 	}
 

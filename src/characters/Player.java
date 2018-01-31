@@ -1,5 +1,7 @@
 package characters;
 
+import game.Command;
+import game.Game;
 import game.Weapon;
 
 public class Player extends Character {
@@ -10,9 +12,11 @@ public class Player extends Character {
 		this.name = name;
 		// Always spawn player with chickenbone
 		this.weapon = Weapon.chickenbone;
-		
-		System.out.println(this.name + " was spawned into the world.");
-		System.out.println(this.name + " is confused, but is holding a " + this.weapon + " with " + this.weapon.GetDamage() + " damage to defend ");
+
+		if(Game.debug == false) {
+			System.out.println(this.name + " was spawned into the world.");
+			System.out.println(this.name + " is confused, but is holding a " + this.weapon + " with " + this.weapon.GetDamage() + " damage to defend ");
+		}
 	}
 	
 	public void setGender(char characterGender) {
@@ -20,6 +24,14 @@ public class Player extends Character {
 			this.gender = characterGender;
 		} else {
 		}
+	}
+	
+	public void Do(Command command, String argument) {
+		Command.ExecuteCommand(command, argument);
+	}
+
+	public void Do(Command command) {
+		Command.ExecuteCommand(command);
 	}
 
 }

@@ -17,5 +17,24 @@ public enum Command {
 		System.out.print("\n");
 	}
 	
+	public static void ExecuteCommand(Command command, String argument) {
+		switch(command) {
+		case HELP:
+			Menu.HelpMenu(argument);
+		case LOOK:
+		
+		}
+		
+	}
+	public static void ExecuteCommand(Command command) {
+		switch(command) {
+		case HELP:
+			Menu.HelpMenu();
+		case LOOK:
+			
+		
+		}
+		
+	}
 
 }
