@@ -44,7 +44,7 @@ public enum Command {
 			Menu.HelpMenu();
 			break;
 		case LOOK:
-			System.out.println("You look around and see " + Game.player.GetLocation().Describe());
+			System.out.println("You look around. " + Game.player.GetLocation().Describe());
 			break;
 		case MOVE:
 			System.out.println("You move");

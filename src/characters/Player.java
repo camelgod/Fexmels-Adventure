@@ -4,6 +4,7 @@ import game.Command;
 import game.Game;
 import game.Weapon;
 import world.Location;
+import static world.LocationType.*;
 
 public class Player extends Character {
 
@@ -13,8 +14,6 @@ public class Player extends Character {
 		this.name = name;
 		// Always spawn player with chickenbone
 		this.weapon = Weapon.chickenbone;
-		this.location = new Location(this.name, this.experience, false);
-		this.location.createRandomDangerousLocation(this);
 		this.level = 0;
 		
 
@@ -29,6 +28,13 @@ public class Player extends Character {
 			this.gender = characterGender;
 		} else {
 		}
+	}
+	
+	public void Spawn(Location loc) {
+		this.location = loc;
+	}
+	public void SpawnRandom() {
+		this.location = Location.GenerateRandom("Cozy Castle", CITY, true);
 	}
 	
 

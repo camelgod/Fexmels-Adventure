@@ -16,6 +16,7 @@ public class Game {
 
 	public static void Initialize() {
 			player = new Player(Menu.CreateStringMenu("Please enter your name: "));
+			player.SpawnRandom();
 			// player.setGender(Menu.CreateCharMenu("What is your gender?: "));
 			// Menu.CreateMultiMenu("Welcome to the tavern!\nWhat would you like to do?: ", new String[]{"Sleep", "Eat"});
 	}
