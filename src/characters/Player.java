@@ -3,6 +3,7 @@ package characters;
 import game.Command;
 import game.Game;
 import game.Weapon;
+import world.Location;
 
 public class Player extends Character {
 
@@ -12,6 +13,10 @@ public class Player extends Character {
 		this.name = name;
 		// Always spawn player with chickenbone
 		this.weapon = Weapon.chickenbone;
+		this.location = new Location(this.name, this.experience, false);
+		this.location.createRandomDangerousLocation(this);
+		this.level = 0;
+		
 
 		if(Game.debug == false) {
 			System.out.println(this.name + " was spawned into the world.");
@@ -26,12 +31,5 @@ public class Player extends Character {
 		}
 	}
 	
-	public void Do(Command command, String argument) {
-		Command.ExecuteCommand(command, argument);
-	}
-
-	public void Do(Command command) {
-		Command.ExecuteCommand(command);
-	}
 
 }

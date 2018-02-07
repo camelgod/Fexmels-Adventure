@@ -9,7 +9,7 @@ import world.Location;
 public class Character implements CharacterBehavior {
 
 	int hp;
-	private int level;
+	protected int level;
 	int experience;
 	String name;
 	Weapon weapon;
@@ -50,6 +50,10 @@ public class Character implements CharacterBehavior {
 	
 	public int getLevel() {
 		return this.level;
+	}
+
+	public Location GetLocation() {
+		return this.location;
 	}
 
 }

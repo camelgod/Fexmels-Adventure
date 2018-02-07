@@ -3,7 +3,7 @@ package game;
 import java.util.ArrayList;
 
 import java.util.Scanner;
-import game.Command;
+import game.*;
 
 public class Menu {
 
@@ -22,13 +22,18 @@ public class Menu {
 	public static void GetCommand() {
 		System.out.print("Enter command: ");
 		String reply = sc.nextLine();
-
-		if(reply.contains(" ")) {
-			Command command = Command.valueOf(reply.substring(0, reply.indexOf(" ")));
-			String argument = reply.substring(reply.indexOf(" ") + 1);
-			Command.ExecuteCommand(command, argument);
+		
+		if(Command.Contains(reply)) {
+			if(reply.contains(" ")) {
+				Command command = Command.valueOf(reply.substring(0, reply.indexOf(" ")));
+				String argument = reply.substring(reply.indexOf(" ") + 1);
+				Command.ExecuteCommand(command, argument);
+			} else {
+				Command.ExecuteCommand(Command.valueOf(reply));
+			}
 		} else {
-			Command.ExecuteCommand(Command.valueOf(reply));
+			// Print Help menu if command is unrecognized
+			Menu.HelpMenu();
 		}
 	}
 
@@ -77,7 +82,6 @@ public class Menu {
 		Command.GetAvailableCommands();
 		System.out.println("To get specific help, use command \"HELP [word]\".\nFor example \"HELP weapons\"");
 		GetCommand();
-		
 	}
 
 }
