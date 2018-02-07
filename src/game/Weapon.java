@@ -1,31 +1,27 @@
 package game;
 
-import java.util.Random;
-
-public enum Weapon {
-	dagger,
-	sword,
-	staff,
-	spear,
-	chickenbone;
+public class Weapon {
+	int damage;
+	int weight;
+	String description;
+	WeaponType type;
 	
-	public int GetDamage() {
-		switch(this) {
-			case dagger:
-				return 20;
-			case sword:
-				return 40;
-			default:
-				return 0;
-		}
+	public Weapon(WeaponType type) {
+		this.type = type;
+		this.damage = type.GetDamage();
+		this.description = type.GetDescription();
+	}
+	
+	public int getDamage() {
+		return this.damage;
 	}
 
-	public static Weapon makeRandomWeapon() {
-
-		Weapon weapon = Weapon.values()[new Random().nextInt(Weapon.values().length)];
-		
-		return weapon;
+	public WeaponType getType() {
+		return this.type;
 	}
-
+	
+	public static Weapon CreateRandom() {
+		return new Weapon(WeaponType.Random());
+	}
 
 }

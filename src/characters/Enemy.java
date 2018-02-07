@@ -1,6 +1,7 @@
 package characters;
 
 import game.Weapon;
+import game.WeaponType;
 
 public class Enemy extends Character {
 	
@@ -8,7 +9,7 @@ public class Enemy extends Character {
 
 	public Enemy() {
 		this.type = EnemyType.makeRandomEnemyType();
-		this.weapon = Weapon.makeRandomWeapon();
+		this.weapon = Weapon.CreateRandom();
 	}
 
 }

@@ -11,7 +11,7 @@ import characters.Player;
 public class Game {
 	
 	public static Player player;
-	public static boolean debug = true;
+	public static boolean debug = false;
 	
 
 	public static void Initialize() {

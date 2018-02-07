@@ -1,6 +1,7 @@
 package characters;
 
 import game.Weapon;
+import game.WeaponType;
 import world.Location;
 
 /*
