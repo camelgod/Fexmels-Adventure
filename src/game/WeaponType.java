@@ -9,7 +9,7 @@ public enum WeaponType {
 	SPEAR,
 	CHICKENBONE;
 	
-	public int GetDamage() {
+	public int GetBaseDamage() {
 		switch(this) {
 			case DAGGER:
 				return 20;

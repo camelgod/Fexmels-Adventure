@@ -1,10 +1,13 @@
 package world;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 import characters.Player;
 
 public class Location {
+	
+	public static ArrayList<Location> visitedLocations = new ArrayList<Location>();
 	LocationType type;
 	String name;
 	int enemyLevels;

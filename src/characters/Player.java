@@ -33,6 +33,7 @@ public class Player extends Character {
 	
 	public void Spawn(Location loc) {
 		this.location = loc;
+		Location.visitedLocations.add(loc);
 	}
 	public void SpawnRandom() {
 		this.location = Location.GenerateRandom("Cozy Castle", CITY, true);

@@ -21,7 +21,7 @@ public class Menu {
 
 	public static void GetCommand() {
 		System.out.print("Enter command: ");
-		String reply = sc.nextLine();
+		String reply = sc.nextLine().toUpperCase();
 		
 		if(Command.Contains(reply)) {
 			if(reply.contains(" ")) {
@@ -70,7 +70,7 @@ public class Menu {
 		switch(argument) {
 		case "weapon":
 		case "weapons":
-			System.out.println("You are currently wielding " + Game.player.getWeapon() + " which has damage of " + Game.player.getWeapon().GetDamage());
+			System.out.println("You are currently wielding " + Game.player.getWeapon() + " which has damage of " + Game.player.getWeapon().getDamage());
 		}
 		
 		GetCommand();

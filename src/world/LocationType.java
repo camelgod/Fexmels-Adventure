@@ -7,6 +7,7 @@ public enum LocationType {
 	SWAMP,
 	DESERT,
 	FOREST,
+	RUIN,
 	BADLANDS;
 	
 	public static LocationType random() {
